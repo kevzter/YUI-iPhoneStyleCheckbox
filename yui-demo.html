@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>iPhone Style Radios Demo</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+		<style type="text/css">
+			body {
+				padding: 10px;
+			}
+			label.left {
+				float: left;
+				padding: 4px;
+				padding-right: 15px;
+			}
+			.css_sized_container .iPhoneCheckContainer {
+				width: 250px;
+			}
+			ol {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ol li {
+				padding: 10px;
+				margin: 0;
+			}
+			.onchange input {
+				opacity: 1 !important;
+				left: 100px;
+			}
+			.onchange .iPhoneCheckContainer {
+				overflow: visible;
+			}
+		</style>
+	</head>
+	<body>
+		<ol class="on_off">
+			<li>
+				<label class="left" for="on_off">
+					Default
+				</label>
+				<div class="iphone-check">
+					<input type="checkbox" id="on_off" />
+				</div>
+			</li>
+			<li>
+				<label class="left" for="on_off_on">
+					Default On
+				</label>
+				<div class="iphone-check">
+					<input type="checkbox" checked="checked" id="on_off_on"/>
+				</div>
+			</li>
+		</ol>
+		<ol class="css_sized_container">
+			<li>
+				<label class="left" for="css_sized_container">
+					CSS Sized Container and Handle
+				</label>
+				<div class="iphone-check">
+					<input type="checkbox" id="css_sized_container"/>
+				</div>
+			</li>
+		</ol>
+		<ol class="long_tiny">
+			<li>
+				<label class="left" for="long_tiny">
+					Long and short labels
+				</label>
+				<div class="iphone-check">
+					<input type="checkbox" id="long_tiny"/>
+				</div>
+			</li>
+		</ol>
+		<ol class="onchange">
+			<li>
+				<div id="iphone-check">
+					<input type="checkbox" id="onchange"/>
+				</div>
+				<br />
+				<p>
+					Checkbox status is
+					<strong>
+					<span id="status">...</span>
+					</strong>.
+				</p>
+			</li>
+		</ol>
+		<!-- Combo-handled YUI JS files: -->
+		<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/animation/animation-min.js&2.9.0/build/selector/selector-min.js"></script>
+		<script type="text/javascript"  src="yui/iphone-style-checkboxes.js" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			YAHOO.util.Event.onDOMReady( function() {
+				var $Y = YAHOO,
+					$W =  $Y.widget,
+					$D = $Y.util.Dom,
+					eStatus = $D.get('status'),
+					eEL;
+
+				$W.iPhoneStyle('.on_off .iphone-check');
+				$W.iPhoneStyle('.css_sized_container .iphone-check', {
+					resizeContainer: false,
+					resizeHandle: false
+				});
+				$W.iPhoneStyle('.long_tiny .iphone-check', {
+					checkedLabel: 'Very Long Text',
+					uncheckedLabel: 'Tiny'
+				});
+				eEL = $D.get("iphone-check");
+				$W.iPhoneStyle(eEL);
+				eEL = $D.get("onchange");
+				$Y.lang.later(2500, eEL, function() {
+					this.checked = !this.checked;
+					eStatus.innerHTML = this.checked;
+					this.fChange();
+				}, null, true);
+			});
+		</script>
+	</body>
+</html>
