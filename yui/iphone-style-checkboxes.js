@@ -1,6 +1,7 @@
 /*!
  // iPhone-style Checkboxes using YUI 2 api
  // Copyright Thomas Reynolds, licensed GPL & MIT
+ // Ported to YUI library by Kevin Jundt
  */
 (function() {
 
