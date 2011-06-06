@@ -4,12 +4,12 @@ Turn your checkboxes into iPhone-style binary switches.
 
 == Dependencies
 
-jQuery or Prototype + Scriptaculous
+YUI 2.9.0 Base/Dom/Event/Selector/Animation (optional)
 
 == Use
 
 Please see jquery-demo.html or prototype-demo.html for example use.
 
 
-Homepage:: http://tdreyno.github.com/iphone-style-checkboxes/
+Homepage:: https://github.com/kevzter/YUI-iPhoneStyleCheckbox/
 License:: Copyright (c) 2009 Thomas Reynolds <mailto:tdreyno@gmail.com>, released under the MIT license
