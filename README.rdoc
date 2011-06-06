@@ -12,4 +12,4 @@ Please see jquery-demo.html or prototype-demo.html for example use.
 
 
 Homepage:: https://github.com/kevzter/YUI-iPhoneStyleCheckbox/
-License:: Copyright (c) 2009 Thomas Reynolds <mailto:tdreyno@gmail.com>, released under the MIT license
+License:: Copyright (c) 2009 Thomas Reynolds <mailto:tdreyno@gmail.com>, released under the MIT license : Ported to YUI by Kevin Jundt <mailto:kevzter@pacbell.net>
